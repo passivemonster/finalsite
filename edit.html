@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Website </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<style>
+
+.webgl {
+  height: 30rem ;
+  width: 100% ;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.center-block {
+  /* display: block; */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 15px;
+  width: 10em ;
+  height: 10em ;
+}
+
+</style>
+
+<style>
+  /* .flip-container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+
+    border: 1px solid #ccc;
+  } */
+
+  .flip-container:hover .flipper,
+  .flip-container.hover .flipper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+
+  .flip-container,
+  .front,
+  .back {
+    width: 320px;
+    height: 427px;
+  }
+
+  .flipper {
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+  }
+
+  .front,
+  .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .front {
+    /* background-color: grey ; */
+    z-index: 2;
+  }
+
+  .back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+
+    background: #f8f8f8;
+  }
+
+
+  .back-title {
+    font-weight: bold;
+    color: #00304a;
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.05em #acd7e5;
+    font-family: Courier;
+    font-size: 2em;
+  }
+
+  .back p {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0 20px;
+    font-family: arial;
+    line-height: 2em;
+  }
+/* Elate theme idea */
+
+
+  .things_we_do {
+    /* width: 33.33%; */
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    min-height: 300px;
+    vertical-align: middle;
+    padding: 40px;
+    background: #fff;
+    -webkit-box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+    -moz-box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+    -ms-box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+    -o-box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+    box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+    z-index: 7;
+    /* flex-grow: 1; */
+    background-size: cover;
+    position: relative;
+    backgroun-repeat: no-repeat;
+  }
+  @media only screen and (min-width: 1000px) {
+    .things_we_do {
+      width: 33.33%;
+    }
+}
+
+
+</style>
+
+</head>
+<body>
+
+
+<div class="container-fluid">
+
+  <table class="table table-borderless">
+    <tbody>
+      <tr>
+        <div class="container-fluid ">
+          <img src="pic.jpg" alt="meme" class="webgl"/>
+        </div>
+      </tr>
+      <tr>
+        <td>
+          <div class="navbar navbar-dark bg-dark shadow" id="navbar">
+            <div class="container d-flex">
+              <button  class="navbar-brand d-flex align-items-center" id="landing_page">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                <strong>Memory</strong>
+              </button>
+              <button class="navbar-brand d-flex align-items-center" id="what_we_do">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                <strong>Memory</strong>
+              </button>
+              <button class="navbar-brand d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                <strong>Memory</strong>
+              </button>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navheader">
+                <i class="material-icons">more_vert</i>
+              </button>
+            </div>
+          </div>
+        </td>
+
+      </tr>
+      <!-- <tr>
+        <td>Mary</td>
+
+      </tr>
+      <tr>
+        <td>July</td>
+
+      </tr> -->
+    </tbody>
+  </table>
+  <section id="landing_content">
+
+
+  <section>
+
+    <div class="row">
+        <div class="container">
+        <img src="pic.jpg" alt="logo" class="center-block" />
+        </div>
+    </div>
+  </section>
+  <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Memory line</h1>
+        <p class="lead text-muted">
+          So, Basically we turned tables and destroyed old ideas. We reinvented the off-road wheel and rode on it fast. Life is just a mere memory but what really stands out is the reason it happens. That is the hero shot. That is jumbotron!!
+        </p>
+        <p>
+          <button class="bton bton-1 bton-1a">Thats Us!!</button>
+          <button class="bton bton-1 bton-1a">Fiddle more!!</button>
+        </p>
+
+      </div>
+  </section>
+</section>
+
+</div>
+
+<section id="portfolio" style="margin-top:20px;margin-bottom:20px;z-index:-1;">
+  <div class="container">
+    <div class="row">
+      <div class="col things_we_do" >
+
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <h1>API dev and maintain</h1>
+            </div>
+            <div class="back">
+              <div class="back-title">Content in Here!</div>
+              <p>Mozilla Web Developer, MooTools & jQuery Consultant, MooTools Core Developer, Javascript Fanatic, CSS Tinkerer, PHP Hacker, and web lover.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col things_we_do">
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <h1>Application dev</h1>
+            </div>
+            <div class="back">
+              <div class="back-title">Content in Here!</div>
+              <p>Mozilla Web Developer, MooTools & jQuery Consultant, MooTools Core Developer, Javascript Fanatic, CSS Tinkerer, PHP Hacker, and web lover.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col things_we_do">
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <h1>permaculture</h1>
+            </div>
+            <div class="back">
+              <div class="back-title">Content in Here!</div>
+              <p>Mozilla Web Developer, MooTools & jQuery Consultant, MooTools Core Developer, Javascript Fanatic, CSS Tinkerer, PHP Hacker, and web lover.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+<script>
+$(document).ready(function(){
+
+        $("#landing_content").hide();
+        $("#portfolio").show();
+
+    $("#what_we_do").click(function(){
+        $("#landing_content").hide();
+        $("#portfolio").show();
+    });
+    $("#landing_page").click(function(){
+        $("#portfolio").hide();
+        $("#landing_content").show();
+    });
+});
+</script>
+
+</body>
+</html>
